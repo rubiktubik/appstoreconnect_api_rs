@@ -133,20 +133,20 @@ pub async fn analytics_report_requests_get_instance(configuration: &configuratio
 
     if let Some(ref local_var_str) = fields_left_square_bracket_analytics_report_requests_right_square_bracket {
         local_var_req_builder = match "csv" {
-            "multi" => local_var_req_builder.query(&local_var_str.into_iter().map(|p| ("fields[analyticsReportRequests]".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
-            _ => local_var_req_builder.query(&[("fields[analyticsReportRequests]", &local_var_str.into_iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
+            "multi" => local_var_req_builder.query(&local_var_str.iter().map(|p| ("fields[analyticsReportRequests]".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
+            _ => local_var_req_builder.query(&[("fields[analyticsReportRequests]", &local_var_str.iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
         };
     }
     if let Some(ref local_var_str) = fields_left_square_bracket_analytics_reports_right_square_bracket {
         local_var_req_builder = match "csv" {
-            "multi" => local_var_req_builder.query(&local_var_str.into_iter().map(|p| ("fields[analyticsReports]".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
-            _ => local_var_req_builder.query(&[("fields[analyticsReports]", &local_var_str.into_iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
+            "multi" => local_var_req_builder.query(&local_var_str.iter().map(|p| ("fields[analyticsReports]".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
+            _ => local_var_req_builder.query(&[("fields[analyticsReports]", &local_var_str.iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
         };
     }
     if let Some(ref local_var_str) = include {
         local_var_req_builder = match "csv" {
-            "multi" => local_var_req_builder.query(&local_var_str.into_iter().map(|p| ("include".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
-            _ => local_var_req_builder.query(&[("include", &local_var_str.into_iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
+            "multi" => local_var_req_builder.query(&local_var_str.iter().map(|p| ("include".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
+            _ => local_var_req_builder.query(&[("include", &local_var_str.iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
         };
     }
     if let Some(ref local_var_str) = limit_left_square_bracket_reports_right_square_bracket {
@@ -184,20 +184,20 @@ pub async fn analytics_report_requests_reports_get_to_many_related(configuration
 
     if let Some(ref local_var_str) = filter_left_square_bracket_name_right_square_bracket {
         local_var_req_builder = match "csv" {
-            "multi" => local_var_req_builder.query(&local_var_str.into_iter().map(|p| ("filter[name]".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
-            _ => local_var_req_builder.query(&[("filter[name]", &local_var_str.into_iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
+            "multi" => local_var_req_builder.query(&local_var_str.iter().map(|p| ("filter[name]".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
+            _ => local_var_req_builder.query(&[("filter[name]", &local_var_str.iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
         };
     }
     if let Some(ref local_var_str) = filter_left_square_bracket_category_right_square_bracket {
         local_var_req_builder = match "csv" {
-            "multi" => local_var_req_builder.query(&local_var_str.into_iter().map(|p| ("filter[category]".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
-            _ => local_var_req_builder.query(&[("filter[category]", &local_var_str.into_iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
+            "multi" => local_var_req_builder.query(&local_var_str.iter().map(|p| ("filter[category]".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
+            _ => local_var_req_builder.query(&[("filter[category]", &local_var_str.iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
         };
     }
     if let Some(ref local_var_str) = fields_left_square_bracket_analytics_reports_right_square_bracket {
         local_var_req_builder = match "csv" {
-            "multi" => local_var_req_builder.query(&local_var_str.into_iter().map(|p| ("fields[analyticsReports]".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
-            _ => local_var_req_builder.query(&[("fields[analyticsReports]", &local_var_str.into_iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
+            "multi" => local_var_req_builder.query(&local_var_str.iter().map(|p| ("fields[analyticsReports]".to_owned(), p.to_string())).collect::<Vec<(std::string::String, std::string::String)>>()),
+            _ => local_var_req_builder.query(&[("fields[analyticsReports]", &local_var_str.iter().map(|p| p.to_string()).collect::<Vec<String>>().join(",").to_string())]),
         };
     }
     if let Some(ref local_var_str) = limit {

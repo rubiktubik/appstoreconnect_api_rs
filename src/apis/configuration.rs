@@ -13,7 +13,7 @@ use std::path::PathBuf;
 
 use crate::models::jwt::generate_jwt;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Default)]
 pub struct Configuration {
     pub base_path: String,
     pub user_agent: Option<String>,
@@ -32,6 +32,15 @@ impl Configuration {
             user_agent: Some("OpenAPI-Generator/3.6.0/rust".to_owned()),
             client: reqwest::Client::new(),
             bearer_access_token: Some(generate_jwt(&key_id, &issuer_id, private_key_path)?),
+        };
+        Ok(config)
+    }
+    pub fn from_existing_jwt(jwt: String) -> Result<Configuration> {
+        let config = Configuration {
+            base_path: "https://api.appstoreconnect.apple.com".to_owned(),
+            user_agent: Some("OpenAPI-Generator/3.6.0/rust".to_owned()),
+            client: reqwest::Client::new(),
+            bearer_access_token: Some(jwt),
         };
         Ok(config)
     }
